@@ -1,0 +1,6 @@
+[Unit]
+Description=Change swww-daemon wallpaper between day and night
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/hypr/swww.sh

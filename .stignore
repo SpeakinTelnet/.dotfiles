@@ -1,0 +1,49 @@
+// ╔═════════════════╗
+// ║ Syncthing Files ║
+// ╚═════════════════╝
+
+!/.stignore
+
+// ╔═════════════════╗
+// ║ User Files      ║
+// ╚═════════════════╝
+/Desktop/.*
+!/Desktop
+
+/Documents/.*
+!/Documents
+
+/Downloads/.*
+!/Downloads
+
+/Music/.*
+!/Music
+
+/Pictures/.*
+!/Pictures
+
+/Templates/.*
+!/Templates
+
+/Videos/.*
+!/Videos
+
+
+// ╔═════════════════╗
+// ║ Development     ║
+// ╚═════════════════╝
+.git
+venv
+
+// ╔═════════════════╗
+// ║ DotFiles        ║
+// ╚═════════════════╝
+
+!/.oh-my-zsh
+!/.zshrc
+
+
+
+// Ignore everything else
+
+*
