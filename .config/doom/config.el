@@ -40,8 +40,6 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
-
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -79,3 +77,21 @@
 
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "app.zen_browser.zen.desktop")
+
+(after! org
+  (setq org-directory "~/org/")
+  (setq org-tags-column (- 10 (window-body-width)))
+  (set-face-attribute 'org-column nil
+                      :inherit 'default)
+  (load! "gtd-org.el")
+)
+
+(after! org-agenda
+  (setq org-agenda-files (list "inbox.org" "agenda.org" "notes.org" "projects.org"))
+  (setq org-agenda-prefix-format
+        '((agenda . " %i %-12:c%?-12t% s")
+          (todo   . " ")
+          (tags   . " %i %-12:c")
+          (search . " %i %-12:c")))
+  (load! "gtd-agenda.el")
+)
