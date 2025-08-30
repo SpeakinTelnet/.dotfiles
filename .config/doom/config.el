@@ -84,10 +84,11 @@
   (set-face-attribute 'org-column nil
                       :inherit 'default)
   (load! "gtd-org.el")
+  (load! "workout.el")
 )
 
 (after! org-agenda
-  (setq org-agenda-files (list "inbox.org" "agenda.org" "notes.org" "projects.org"))
+  (setq org-agenda-files (list "inbox.org" "agenda.org" "notes.org" "projects.org" "workout.org"))
   (setq org-agenda-prefix-format
         '((agenda . " %i %-12:c%?-12t% s")
           (todo   . " ")
